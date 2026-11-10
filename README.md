@@ -71,12 +71,11 @@ per second); details are in Sections 2.8–2.10 of the manuscript and in the doc
 * **Electrode drop-out:** when all five bands of a channel fall below −1 within a segment, index values that depend on that channel
   in that segment are set to missing (`data/electrode_dropout.csv`; 4 valence-related and 11 arousal-related segment values in six
   recordings).
-* **Corrections from the study records** (flagged in `participant_indices.csv`): five recordings had been filed under the wrong
-  group (`group_reassigned`); for three recordings the presentation order was taken from the study records because the file name
-  was wrong (`order_from_study_records`); in five recordings with the order 4–3–2–1 the segment labels were serial positions and
-  were mapped to categories (`labels_mapped_from_position`).
-* The band-pass, notch-filter, and ICA steps described in the original preprocessing protocol could not be verified from the
-  retained records and are not part of this pipeline.
+* **Verification against the study records:** the group assignment and presentation order of every recording were checked against
+  the study records before analysis; recordings whose file labels were corrected are flagged in `participant_indices.csv`
+  (`group_reassigned`, `order_from_study_records`), and recordings whose segment labels followed serial position were mapped to
+  categories (`labels_mapped_from_position`).
+* No filtering, ICA, or further artifact rejection was applied beyond the processing performed by the Mind Monitor application.
 
 ## Data availability and privacy
 
