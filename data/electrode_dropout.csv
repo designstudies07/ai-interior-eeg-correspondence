@@ -1,0 +1,12 @@
+participant_id,segment,channel
+A16,baseline,TP9
+A18,baseline,TP9
+B10,HVHA,AF7
+B10,HVLA,AF7
+B10,LVHA,AF7
+B10,LVLA,AF7
+B21,LVLA,TP9
+C03,HVLA,TP10
+C03,LVLA,TP10
+C03,baseline,TP10
+C08,baseline,TP9

@@ -1,0 +1,308 @@
+{
+ "n_participants": 84,
+ "by_group_n": {
+  "A": 20,
+  "B": 22,
+  "C": 21,
+  "D": 21
+ },
+ "absolute": {
+  "overall": {
+   "hits": 79,
+   "of": 336,
+   "rate": 0.235,
+   "chance_rate": 0.25,
+   "p": 0.8257
+  },
+  "by_category": {
+   "LVLA": {
+    "hits": 14,
+    "of": 84,
+    "rate": 0.167,
+    "chance_rate": 0.155,
+    "p": 0.4045
+   },
+   "HVLA": {
+    "hits": 8,
+    "of": 84,
+    "rate": 0.095,
+    "chance_rate": 0.131,
+    "p": 0.9529
+   },
+   "LVHA": {
+    "hits": 34,
+    "of": 84,
+    "rate": 0.405,
+    "chance_rate": 0.393,
+    "p": 0.4392
+   },
+   "HVHA": {
+    "hits": 23,
+    "of": 84,
+    "rate": 0.274,
+    "chance_rate": 0.321,
+    "p": 0.935
+   }
+  },
+  "by_group": {
+   "A": {
+    "hits": 19,
+    "of": 80,
+    "rate": 0.237,
+    "chance_rate": 0.25,
+    "p": 0.6819
+   },
+   "B": {
+    "hits": 19,
+    "of": 88,
+    "rate": 0.216,
+    "chance_rate": 0.251,
+    "p": 0.878
+   },
+   "C": {
+    "hits": 18,
+    "of": 84,
+    "rate": 0.214,
+    "chance_rate": 0.25,
+    "p": 0.8783
+   },
+   "D": {
+    "hits": 23,
+    "of": 84,
+    "rate": 0.274,
+    "chance_rate": 0.25,
+    "p": 0.2792
+   }
+  },
+  "by_group_category": {
+   "A_LVLA": {
+    "hits": 3,
+    "of": 20
+   },
+   "A_HVLA": {
+    "hits": 2,
+    "of": 20
+   },
+   "A_LVHA": {
+    "hits": 8,
+    "of": 20
+   },
+   "A_HVHA": {
+    "hits": 6,
+    "of": 20
+   },
+   "B_LVLA": {
+    "hits": 6,
+    "of": 22
+   },
+   "B_HVLA": {
+    "hits": 3,
+    "of": 22
+   },
+   "B_LVHA": {
+    "hits": 6,
+    "of": 22
+   },
+   "B_HVHA": {
+    "hits": 4,
+    "of": 22
+   },
+   "C_LVLA": {
+    "hits": 0,
+    "of": 21
+   },
+   "C_HVLA": {
+    "hits": 3,
+    "of": 21
+   },
+   "C_LVHA": {
+    "hits": 9,
+    "of": 21
+   },
+   "C_HVHA": {
+    "hits": 6,
+    "of": 21
+   },
+   "D_LVLA": {
+    "hits": 5,
+    "of": 21
+   },
+   "D_HVLA": {
+    "hits": 0,
+    "of": 21
+   },
+   "D_LVHA": {
+    "hits": 11,
+    "of": 21
+   },
+   "D_HVHA": {
+    "hits": 7,
+    "of": 21
+   }
+  },
+  "per_person": {
+   "distribution": {
+    "0": 19,
+    "1": 51,
+    "2": 14
+   },
+   "chance_distribution": {
+    "0": 16.5,
+    "1": 51.9,
+    "2": 14.8,
+    "3": 0.8,
+    "4": 0.1
+   }
+  }
+ },
+ "relative": {
+  "overall": {
+   "hits": 77,
+   "of": 336,
+   "rate": 0.229,
+   "chance_rate": 0.25,
+   "p": 0.8099
+  },
+  "by_category": {
+   "LVLA": {
+    "hits": 15,
+    "of": 84,
+    "rate": 0.179,
+    "chance_rate": 0.241,
+    "p": 0.9481
+   },
+   "HVLA": {
+    "hits": 17,
+    "of": 84,
+    "rate": 0.202,
+    "chance_rate": 0.267,
+    "p": 0.9507
+   },
+   "LVHA": {
+    "hits": 31,
+    "of": 84,
+    "rate": 0.369,
+    "chance_rate": 0.278,
+    "p": 0.0344
+   },
+   "HVHA": {
+    "hits": 14,
+    "of": 84,
+    "rate": 0.167,
+    "chance_rate": 0.214,
+    "p": 0.9036
+   }
+  },
+  "by_group": {
+   "A": {
+    "hits": 14,
+    "of": 80,
+    "rate": 0.175,
+    "chance_rate": 0.25,
+    "p": 0.9464
+   },
+   "B": {
+    "hits": 18,
+    "of": 88,
+    "rate": 0.205,
+    "chance_rate": 0.25,
+    "p": 0.8529
+   },
+   "C": {
+    "hits": 20,
+    "of": 84,
+    "rate": 0.238,
+    "chance_rate": 0.25,
+    "p": 0.6239
+   },
+   "D": {
+    "hits": 25,
+    "of": 84,
+    "rate": 0.298,
+    "chance_rate": 0.25,
+    "p": 0.1984
+   }
+  },
+  "by_group_category": {
+   "A_LVLA": {
+    "hits": 2,
+    "of": 20
+   },
+   "A_HVLA": {
+    "hits": 1,
+    "of": 20
+   },
+   "A_LVHA": {
+    "hits": 7,
+    "of": 20
+   },
+   "A_HVHA": {
+    "hits": 4,
+    "of": 20
+   },
+   "B_LVLA": {
+    "hits": 3,
+    "of": 22
+   },
+   "B_HVLA": {
+    "hits": 5,
+    "of": 22
+   },
+   "B_LVHA": {
+    "hits": 7,
+    "of": 22
+   },
+   "B_HVHA": {
+    "hits": 3,
+    "of": 22
+   },
+   "C_LVLA": {
+    "hits": 2,
+    "of": 21
+   },
+   "C_HVLA": {
+    "hits": 8,
+    "of": 21
+   },
+   "C_LVHA": {
+    "hits": 7,
+    "of": 21
+   },
+   "C_HVHA": {
+    "hits": 3,
+    "of": 21
+   },
+   "D_LVLA": {
+    "hits": 8,
+    "of": 21
+   },
+   "D_HVLA": {
+    "hits": 3,
+    "of": 21
+   },
+   "D_LVHA": {
+    "hits": 10,
+    "of": 21
+   },
+   "D_HVHA": {
+    "hits": 4,
+    "of": 21
+   }
+  },
+  "per_person": {
+   "distribution": {
+    "0": 35,
+    "1": 26,
+    "2": 18,
+    "3": 5
+   },
+   "chance_distribution": {
+    "0": 28.9,
+    "1": 32.3,
+    "2": 17.8,
+    "3": 3.9,
+    "4": 1.1
+   }
+  }
+ }
+}
