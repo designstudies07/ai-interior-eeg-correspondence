@@ -23,7 +23,7 @@ Target categories: LVLA = low valence–low arousal (image 1), HVLA = high valen
 data/
   participant_indices.csv   one row per participant: group, sex, presentation order, per-segment EEG indices
   electrode_dropout.csv     channel-segments with loss of electrode contact (index values set to missing)
-  band_summary.csv          band-level theta/alpha/beta power by segment and site (Supplementary Table S1)
+  band_summary.csv          band-level theta/alpha/beta power by segment and site, plus alpha at AF7 and AF8 (Supplementary Table S1)
   manifest_template.csv     layout of the manifest required to recompute the indices from raw exports
   data_dictionary.md        description of every column
 scripts/
@@ -66,7 +66,8 @@ per second); details are in Sections 2.8–2.10 of the manuscript and in the doc
 * **Arousal-related index:** beta / (alpha + theta), computed per channel on linear power and averaged over the four channels.
 * **Change scores:** ΔValence = FAA(image) − FAA(baseline); ΔArousal = [A(image) − A(baseline)] / A(baseline). No truncation.
 * **Missing data:** segments with fewer than 15 valid samples are treated as missing; consecutive duplicate samples are removed.
-* **Text-stored cells:** 33,354 band-power cells had been stored as text with dot-separated digit groups during transcription.
+* **Text-stored cells:** the CSV exports had been opened and re-saved in spreadsheet software set to a locale that uses the dot as
+  the thousands separator, which converted 33,354 band-power values (11.3% of all values) to text with dot-separated digit groups.
   They correspond to absolute values ≥ 1 and are decoded by placing the decimal point after the first digit.
 * **Electrode drop-out:** when all five bands of a channel fall below −1 within a segment, index values that depend on that channel
   in that segment are set to missing (`data/electrode_dropout.csv`; 4 valence-related and 11 arousal-related segment values in six

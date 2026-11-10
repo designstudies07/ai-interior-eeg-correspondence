@@ -19,6 +19,9 @@ Processing (Sections 2.8-2.10 of the manuscript):
     mean beta / (mean alpha + mean theta). Segments with < 3 valid rows get no index; the analyses use >= 15.
   * Electrode drop-out: if all five bands of a channel reach values <= -1 within a segment, index values that depend on that
     channel in that segment are set to missing (FAA: AF7/AF8; arousal: any channel).
+  * Text-stored cells arose when the CSV exports were opened and re-saved in spreadsheet software set to a locale that uses the
+    dot as thousands separator; values >= 1 were thereby converted to text.
+  * Band summary (Supplementary Table S1): theta/alpha/beta at frontal and temporal sites, plus alpha at AF7 and AF8 separately.
 Outputs: data/participant_indices.csv, data/electrode_dropout.csv, data/band_summary.csv
 """
 import argparse
@@ -118,6 +121,10 @@ def process(path, order):
                 mm = seg[[f"{band}_{c}" for c in chs]].mean()
                 if mm.notna().any():
                     bandrows.append({"seg": {"Previous": "Baseline"}.get(s, NAME[s]), "band": band, "site": site, "v": mm.mean()})
+        for ch, site in (("AF7", "Left frontal (AF7)"), ("AF8", "Right frontal (AF8)")):  # inputs of the asymmetry index
+            v = seg[f"Alpha_{ch}"].mean()
+            if pd.notna(v):
+                bandrows.append({"seg": {"Previous": "Baseline"}.get(s, NAME[s]), "band": "Alpha", "site": site, "v": v})
     return rec, drop, bandrows
 
 
