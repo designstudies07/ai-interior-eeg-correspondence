@@ -31,7 +31,8 @@ scripts/
   01_compute_indices_from_raw.py     raw Mind Monitor exports -> data/ (requires the non-public raw files)
   02_analysis.py                     Table 3, within-participant contrasts, Figures 2-4, Supplementary Figure S1
   03_quadrant_analysis.py            intended-quadrant correspondence vs. chance (Table 2)
-results/                             outputs of scripts 02 and 03 as used in the manuscript
+  04_sensitivity_analysis.py         smallest effects detectable with 80% power (Section 2.12)
+results/                             outputs of scripts 02-04 as used in the manuscript
 requirements.txt
 ```
 
@@ -41,14 +42,16 @@ requirements.txt
 pip install -r requirements.txt
 python scripts/02_analysis.py
 python scripts/03_quadrant_analysis.py
+python scripts/04_sensitivity_analysis.py
 ```
 
-Both scripts read `data/participant_indices.csv` and write to `results/`:
+Scripts 02 and 03 read `data/participant_indices.csv`, script 04 reads their outputs, and all write to `results/`:
 
 | Output | Manuscript |
 |---|---|
 | `results/results.json`, `results/table3_platform_comparisons.csv` | Table 3; Section 3.1 (within-participant tests, category means); Section 3.2 (squared distance) |
 | `results/quadrant_correspondence.json` | Table 2; Section 3.2 |
+| `results/sensitivity.json` | Section 2.12 (sensitivity analysis); Sections 4 and 5 |
 | `results/fig2_valence_by_platform.png`, `results/fig3_arousal_by_platform.png`, `results/fig4_squared_distance.png` | Figures 2–4 |
 | `results/figS1_participant_distributions.png`, `data/band_summary.csv` | Supplementary Figure S1, Supplementary Table S1 |
 
