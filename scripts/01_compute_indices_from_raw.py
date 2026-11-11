@@ -17,8 +17,8 @@ Processing (Sections 2.8-2.10 of the manuscript):
   * Consecutive duplicate rows (written when no new packet arrives) are removed; n_valid = rows without missing band values.
   * Indices on linear power (10**x): FAA = ln(mean alpha AF8) - ln(mean alpha AF7); arousal = mean over the four channels of
     mean beta / (mean alpha + mean theta). Segments with < 3 valid rows get no index; the analyses use >= 15.
-  * Electrode drop-out: if all five bands of a channel reach values <= -1 within a segment, index values that depend on that
-    channel in that segment are set to missing (FAA: AF7/AF8; arousal: any channel).
+  * Electrode drop-out: if all five bands of a channel are <= -1 simultaneously (in the same sample) at any point in a segment,
+    index values that depend on that channel in that segment are set to missing (FAA: AF7/AF8; arousal: any channel).
   * Text-stored cells arose when the CSV exports were opened and re-saved in spreadsheet software set to a locale that uses the
     dot as thousands separator; values >= 1 were thereby converted to text.
   * Band summary (Supplementary Table S1): theta/alpha/beta at frontal and temporal sites, plus alpha at AF7 and AF8 separately.
@@ -93,7 +93,8 @@ def process(path, order):
     drop = []
     for s in SEG:
         m = el.eq(s)
-        dropped = [ch for ch in CH if all((df.loc[m, f"{b}_{ch}"] <= -1).any() for b in BANDS5)]
+        # drop-out: at least one sample in which all five bands of the channel are <= -1 simultaneously
+        dropped = [ch for ch in CH if pd.concat([df.loc[m, f"{b}_{ch}"] <= -1 for b in BANDS5], axis=1).all(axis=1).any()]
         drop += [(NAME[s], ch) for ch in dropped]
         seg = df.loc[m & keep, bands].dropna(how="any")
         rec[f"n_valid_{NAME[s]}"] = len(seg)
